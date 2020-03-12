@@ -1,0 +1,28 @@
+// begin reducer
+import { servicesAction } from "../../reducers";
+// end reducer
+
+const service = {
+    pokemonDetail: ({ dispatch, slug }) => {
+        console.log(slug);
+        servicesAction(dispatch).reduxFetch({
+            url: `pokemon/${slug}`,
+            method: "GET",
+            reducer: "service",
+            key: "pokemonDetail",
+            group: "pokemon",
+            message: {
+                200: {
+                    mode: {
+                        use: "alert",
+                        type: "success",
+                        timeOut: 3000,
+                    },
+                    text: "Success Get Ingredients",
+                },
+            },
+        });
+    },
+};
+
+export default service;

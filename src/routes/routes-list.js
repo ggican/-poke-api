@@ -4,7 +4,15 @@ const routeList = [
     {
         path: "/",
         component: lazy(() => import("../pages/home")),
-        role: ["USER"],
+        role: ["GUEST"],
+    },
+    {
+        path: "/pokemon-detail/:slug",
+        component: lazy(() => import("../pages/pokemon-detail")),
+        style: {
+            header: false,
+        },
+        role: ["GUEST"],
     },
     {
         path: "/404",

@@ -21,9 +21,15 @@ const SkeletonLine = styled.div`
     width: ${props => props.width};
 `;
 
-const Skeleton = ({ height = 10, width = "100%", circle = false }) => {
+const Skeleton = ({
+    height = 10,
+    width = "100%",
+    circle = false,
+    style = {},
+}) => {
     return (
         <SkeletonLine
+            style={style}
             circle={circle}
             width={width}
             height={height}

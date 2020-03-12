@@ -5,6 +5,7 @@ const useDataFetching = ({
     serviceFunction = () => {},
     isReady = false,
     params,
+    slug,
     data,
     group,
     key,
@@ -16,7 +17,7 @@ const useDataFetching = ({
     const [resultsResponse, setResult] = useState([]);
     useEffect(() => {
         if (isReady) {
-            serviceFunction({ dispatch, params, data });
+            serviceFunction({ dispatch, params, slug, data });
         }
         return () => {};
     }, [dispatch, serviceFunction, isReady, params, data]);

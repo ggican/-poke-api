@@ -1,4 +1,6 @@
 import React from "react";
+
+import AbilitiesLoading from "./index.loading";
 import AbilitiesStyle from "./index.style";
 const Abilities = props => {
     const { data } = props;
@@ -23,5 +25,7 @@ const Abilities = props => {
         </AbilitiesStyle>
     );
 };
+
+Abilities.Loading = AbilitiesLoading;
 
 export default Abilities;

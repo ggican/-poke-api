@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import StyleCardMoves from "./index.style";
-import CardMovesLoading from "./index.loading";
+import Skeleton from "../../components/skeleton";
 import waveImage from "../../static/wave-image.svg";
 
+import StyleCardMoves from "./index.style";
+
 const CardMoves = props => {
-    const { name, level, randomBackground, width, wave } = props;
+    const { level, randomBackground, width, wave } = props;
     const randomColourOne = "#50a1d8".replace(/0/g, function() {
         return (~~(Math.random() * 16)).toString(16);
     });
@@ -25,11 +26,19 @@ const CardMoves = props => {
                     : "#fff",
             }}
         >
-            {level && <span className="moves__level">LVL {level}</span>}
+            {level && (
+                <span className="moves__level">
+                    <Skeleton width="30px"></Skeleton>
+                </span>
+            )}
             <div className="moves__content">
-                <div className="moves__label">MOVES NAME</div>
+                <div className="moves__label">
+                    <Skeleton width="40%"></Skeleton>
+                </div>
                 <div className="moves__name">
-                    <span>{name}</span>
+                    <span>
+                        <Skeleton width="70%"></Skeleton>
+                    </span>
                 </div>
             </div>
             {wave && (
@@ -41,20 +50,13 @@ const CardMoves = props => {
     );
 };
 
-CardMoves.Loading = CardMovesLoading;
-
 CardMoves.defaultProps = {
-    name: "",
     level: false,
     randomBackground: false,
     width: 75,
     wave: false,
 };
 CardMoves.propTypes = {
-    /**
-      `name` for name of card
-      */
-    name: PropTypes.string,
     /**
       Use `level` for level of moves by default false
       */

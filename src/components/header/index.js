@@ -5,8 +5,8 @@ import {
     HeaderBadge,
     HeaderLogo,
 } from "./index.style";
-import Button from "../../button";
-import Icons from "../../icons";
+import Button from "../button";
+import Icons from "../icons";
 
 const Header = () => {
     return (

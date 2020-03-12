@@ -1,13 +1,9 @@
 const serviceState = {
-    recipes: {
-        ingredients: false,
-    },
     user: {
         auth: false,
     },
-    product: {
-        productList: false,
-        purchase: [],
+    pokemon: {
+        pokemonDetail: false,
     },
 };
 

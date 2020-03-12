@@ -1,6 +1,8 @@
 import React from "react";
 import Style from "./index.style";
 import type from "./index.type";
+import StatsLoading from "./index.loading";
+
 import icSpDefense from "../../static/icons/ic-sp-defense.png";
 import icSpAttack from "../../static/icons/ic-sp-attack.png";
 import icAttack from "../../static/icons/ic-attack.png";
@@ -72,6 +74,8 @@ const Stats = props => {
         </Style>
     );
 };
+
+Stats.Loading = StatsLoading;
 
 Stats.propTypes = type;
 

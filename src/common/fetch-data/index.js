@@ -9,6 +9,7 @@ const CommonFetchData = ({
     service = {
         serviceFunction: () => {},
         params: false,
+        slug: false,
         data: false,
         isReady: false,
         group: "",
