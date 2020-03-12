@@ -26,6 +26,12 @@ const PokemonDetailContent = ({ resultData }) => {
         setData(resultData);
     }, [resultData]);
 
+    useEffect(() => {
+        return () => {
+            setData(false);
+        };
+    }, []);
+
     return (
         <Style>
             <Container noPadding>

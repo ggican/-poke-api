@@ -53,7 +53,7 @@ const Home = () => {
             });
         }
 
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line
     }, [state]);
 
     const handleLoadData = () => {

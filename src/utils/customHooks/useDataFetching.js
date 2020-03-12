@@ -3,6 +3,7 @@ import { useStore } from "../../reducers";
 
 const useDataFetching = ({
     serviceFunction = () => {},
+    serviceClear = () => {},
     isReady = false,
     params,
     slug,
@@ -14,16 +15,19 @@ const useDataFetching = ({
     const [isLoading, setLoading] = useState(true);
     const [errorResponse, setError] = useState(false);
     const [messageResponse, setMessageResponse] = useState();
-    const [resultsResponse, setResult] = useState([]);
+    const [resultsResponse, setResult] = useState(false);
     useEffect(() => {
-        if (isReady) {
-            serviceFunction({ dispatch, params, slug, data });
-        }
-        return () => {};
+        serviceFunction({ dispatch, params, slug, data });
+        return () => {
+            serviceClear({ dispatch });
+            setResult(false);
+        };
     }, [dispatch, serviceFunction, isReady, params, data, slug]);
 
     useEffect(() => {
-        conditionResponseService(state[group][key], isLoading);
+        if (!resultsResponse) {
+            conditionResponseService(state[group][key], isLoading);
+        }
     }, [state, group, key, isLoading]);
 
     const conditionResponseService = (response, isLoading) => {

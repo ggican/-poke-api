@@ -22,6 +22,14 @@ const service = {
             },
         });
     },
+    pokemonDetailClear: ({ dispatch }) => {
+        servicesAction(dispatch).reduxClear({
+            reducer: "service",
+            type: "CLEAR",
+            key: "pokemonDetail",
+            group: "pokemon",
+        });
+    },
 };
 
 export default service;

@@ -8,6 +8,7 @@ const CommonFetchData = ({
     renderBeforeReady = () => {},
     service = {
         serviceFunction: () => {},
+        serviceClear: () => {},
         params: false,
         slug: false,
         data: false,

@@ -17,6 +17,7 @@ const PokemonDetail = ({
         <CommonFetchData
             service={{
                 serviceFunction: service.pokemonDetail,
+                serviceClear: service.pokemonDetailClear,
                 slug: slug,
                 isReady: true,
                 reducer: "service",
