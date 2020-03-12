@@ -4,14 +4,14 @@ import styled from "styled-components";
 import Skeleton from "../skeleton";
 
 const SkeletonBox = styled.div`
+    align-items: center;
     background: rgb(255, 255, 255);
-    margin: 12px 0px;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 12px 0px;
     padding: 0 5px;
-    align-items: center;
 `;
 
 const CardListLoading = () => {

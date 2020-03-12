@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 // import "intersection-observer";
 import InfiniteScroll from "./index";
-import { stub, spy } from "sinon";
-import { MemoryRouter } from "react-router";
+import { stub } from "sinon";
 
 global.scrollTo = jest.fn();
 const spyScrollTo = jest.fn();

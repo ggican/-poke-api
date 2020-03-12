@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export default styled.button`
     background: #fff;
+    border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
-    outline: none;
-    border: 1px solid #ddd;
     flex: 0 0 auto;
     margin-bottom: 5px;
     margin-right: 10px;
+    outline: none;
     padding: 7px;
     position: relative;
     width: ${props => props.width || 70}%;
@@ -32,12 +32,12 @@ export default styled.button`
             width: 100%;
             > span {
                 color: #4a4a4a;
-                font-weight: 600;
-                text-transform: capitalize;
                 display: block;
+                font-weight: 600;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 text-overflow: ellipsis;
+                text-transform: capitalize;
                 white-space: nowrap;
                 width: 100%;
                 ${({ isActive }) =>
