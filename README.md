@@ -26,7 +26,11 @@ run story book for view documentation components
 
 #### `npm run storybook`
 run story book for view documentation components with `npm run storybook`
-Open [http://localhost:6006](http://localhost:3000) to view it in the browser.
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser, or you can open online documentation : <br />
+
+[Click This Link For Open Documentation Online](https://trusting-rosalind-4535c1.netlify.com/)
+
+
 
 ## Available Scripts
 
