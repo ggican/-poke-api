@@ -28,4 +28,10 @@ describe("Button Component", () => {
         expect(tree).toMatchSnapshot();
         expect(tree).toHaveStyleRule("display", "block");
     });
+    it("check children have text <Button />", () => {
+        const tree = renderer
+            .create(<Button type="button">Title</Button>)
+            .toJSON();
+        expect(tree).toHaveStyleRule("display", "inline-block");
+    });
 });

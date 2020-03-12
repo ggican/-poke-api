@@ -6,9 +6,10 @@ describe("Reducer Services Component", () => {
         user: {
             auth: false,
         },
-        product: {
-            productList: false,
-            purchase: [],
+        pokemon: {
+            pokemonDetail: false,
+            pokemonList: false,
+            pokemonFilter: false,
         },
     };
     beforeEach(() => {});
@@ -16,8 +17,8 @@ describe("Reducer Services Component", () => {
     it("SUCCESS servicesRedux Snapshot servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -35,8 +36,8 @@ describe("Reducer Services Component", () => {
     it("SUCCESS servicesRedux type 200 function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -45,19 +46,22 @@ describe("Reducer Services Component", () => {
             isError: false,
             isSuccess: true,
         };
+
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: {
-                ingredients: actionTest,
-            },
             ...result,
+            pokemon: {
+                pokemonList: actionTest,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
 
     it("SUCCESS servicesRedux type 201 function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -67,18 +71,20 @@ describe("Reducer Services Component", () => {
             isSuccess: true,
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: {
-                ingredients: actionTest,
-            },
             ...result,
+            pokemon: {
+                pokemonList: actionTest,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
 
     it("SUCCESS servicesRedux type 201 function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -88,18 +94,20 @@ describe("Reducer Services Component", () => {
             isSuccess: true,
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: {
-                ingredients: actionTest,
-            },
             ...result,
+            pokemon: {
+                pokemonList: actionTest,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
 
     it("SUCCESS servicesRedux type 201 function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -109,18 +117,20 @@ describe("Reducer Services Component", () => {
             isSuccess: false,
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: {
-                ingredients: actionTest,
-            },
             ...result,
+            pokemon: {
+                pokemonList: actionTest,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
 
     it("SUCCESS servicesRedux type 401 function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -130,18 +140,20 @@ describe("Reducer Services Component", () => {
             isSuccess: false,
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: {
-                ingredients: actionTest,
-            },
             ...result,
+            pokemon: {
+                pokemonList: actionTest,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
 
     it("SUCCESS servicesRedux type 404 function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -151,18 +163,20 @@ describe("Reducer Services Component", () => {
             isSuccess: false,
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: {
-                ingredients: actionTest,
-            },
             ...result,
+            pokemon: {
+                pokemonList: actionTest,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
 
     it("SUCCESS servicesRedux type 409 function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -172,18 +186,20 @@ describe("Reducer Services Component", () => {
             isSuccess: false,
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: {
-                ingredients: actionTest,
-            },
             ...result,
+            pokemon: {
+                pokemonList: actionTest,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
 
     it("SUCCESS servicesRedux type 500 function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             data: ["cool"],
             message: {
                 message: "cool its me",
@@ -193,25 +209,33 @@ describe("Reducer Services Component", () => {
             isSuccess: false,
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: {
-                ingredients: actionTest,
-            },
             ...result,
+            pokemon: {
+                pokemonList: actionTest,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
     it("SUCCESS servicesRedux type CLEAR function servicesRedux", () => {
         const actionTest = {
             reducer: "reducer",
-            group: "recipes",
-            key: "ingredients",
+            group: "pokemon",
+            key: "pokemonList",
             defaultData: {
                 isDefault: true,
             },
             type: "CLEAR",
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: { ingredients: { isDefault: true } },
             ...result,
+            pokemon: {
+                pokemonList: {
+                    isDefault: true,
+                },
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
     it("SUCCESS servicesRedux type DEFAULT function servicesRedux", () => {
@@ -219,8 +243,12 @@ describe("Reducer Services Component", () => {
             type: false,
         };
         expect(servicesRedux(state, actionTest)).toEqual({
-            recipes: { ingredients: false },
             ...result,
+            pokemon: {
+                pokemonList: false,
+                pokemonDetail: false,
+                pokemonFilter: false,
+            },
         });
     });
 });
