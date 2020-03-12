@@ -3,7 +3,7 @@ import Style from "./index.style";
 
 import Skeleton from "../skeleton";
 
-const StatsLoading = props => {
+const StatsLoading = () => {
     return (
         <Style>
             <div className="stats__container">

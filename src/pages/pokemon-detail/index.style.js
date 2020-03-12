@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const PokemonDetailStyles = styled.div`
-    width: 100%;
+    display: block;
     padding: 0;
     position: relative;
-    display: block;
+    width: 100%;
 `;
 export default PokemonDetailStyles;

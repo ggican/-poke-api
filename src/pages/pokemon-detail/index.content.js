@@ -6,7 +6,6 @@ import Style from "./index.style";
 
 // begin component global import
 import AvatarHeader from "../../components/avatar-header";
-import Abilities from "../../components/abilities";
 import CardMoves from "../../components/card-moves";
 import Container from "../../components/container";
 import Content from "../../components/content";

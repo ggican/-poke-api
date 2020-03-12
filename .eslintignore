@@ -2,10 +2,11 @@
 /src/components/card-moves/index.style.js
 /src/components/card-moves/index.test.js
 /src/components/detail-banner/index.test.js
+/src/services/image-path.js
 /src/components/grid/index.test.js
 /src/components/horizontal-scroll/index.test.js
-/src/components/layouts/container/index.test.js
-/src/components/layouts/header/index.test.js
+/src/components/container/index.test.js
+/src/components/header/index.test.js
 /src/components/thumb-avatar/index.test.js
 /src/components/tokens/dist/variables.js
 /src/setupTests.js

@@ -20,7 +20,7 @@ const useDataFetching = ({
             serviceFunction({ dispatch, params, slug, data });
         }
         return () => {};
-    }, [dispatch, serviceFunction, isReady, params, data]);
+    }, [dispatch, serviceFunction, isReady, params, data, slug]);
 
     useEffect(() => {
         conditionResponseService(state[group][key], isLoading);

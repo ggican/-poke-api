@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import PokemonDetailContent from "./index.content";
 import PokemonDetailLoading from "./index.loading";
@@ -14,29 +14,25 @@ const PokemonDetail = ({
     },
 }) => {
     return (
-        <div>
-            <CommonFetchData
-                service={{
-                    serviceFunction: service.pokemonDetail,
-                    slug: slug,
-                    isReady: true,
-                    reducer: "service",
-                    key: "pokemonDetail",
-                    group: "pokemon",
-                }}
-                renderLoading={() => (
-                    <PokemonDetailLoading></PokemonDetailLoading>
-                )}
-                renderSuccess={response => {
-                    return (
-                        <PokemonDetailContent
-                            resultData={response}
-                        ></PokemonDetailContent>
-                    );
-                }}
-                renderFailed={() => <div>something wrong</div>}
-            ></CommonFetchData>
-        </div>
+        <CommonFetchData
+            service={{
+                serviceFunction: service.pokemonDetail,
+                slug: slug,
+                isReady: true,
+                reducer: "service",
+                key: "pokemonDetail",
+                group: "pokemon",
+            }}
+            renderLoading={() => <PokemonDetailLoading></PokemonDetailLoading>}
+            renderSuccess={response => {
+                return (
+                    <PokemonDetailContent
+                        resultData={response}
+                    ></PokemonDetailContent>
+                );
+            }}
+            renderFailed={() => <div>something wrong</div>}
+        ></CommonFetchData>
     );
 };
 
