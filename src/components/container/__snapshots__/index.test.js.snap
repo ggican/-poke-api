@@ -11,7 +11,6 @@ exports[`Container Component renders and create snapshot <Content /> 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 auto;
-  overflow-y: hidden;
   padding: 20px 15px 10px 15px;
   padding-bottom: 110px;
   width: 450px;

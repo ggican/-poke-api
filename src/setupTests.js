@@ -36,6 +36,18 @@ const localStorageMock = {
     clear: jest.fn(),
 };
 
+global.IntersectionObserver = class IntersectionObserver {
+    constructor() {}
+
+    observe() {
+        return null;
+    }
+
+    unobserve() {
+        return null;
+    }
+};
+
 global.mountWithTheme = mountWithThemeStyledComponent;
 global.shallowWithTheme = shallowWithThemeStyledComponent;
 global.MemoryRouter = MemoryRouter;
