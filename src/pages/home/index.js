@@ -20,7 +20,7 @@ import service from "./index.service";
 const Home = () => {
     const { dispatch, state } = useStore();
     const [items, setItem] = useState([]);
-    const [isFilter, setIsFilter] = useState(false);
+    const [isFilter, setIsFilter] = useState("");
     const [params, setParams] = useState({
         offset: 0,
         limit: 10,
@@ -29,12 +29,12 @@ const Home = () => {
     const mounted = useRef();
 
     useEffect(() => {
-        const onResponseData = state => {
+        const onGetResponseData = () => {
             const pokemonResult = state?.pokemon?.pokemonList?.data;
 
             setItem(prevState => [
                 ...prevState,
-                ...(isFilter
+                ...(isFilter.length > 0
                     ? pokemonResult?.pokemon?.length > 0 &&
                       pokemonResult?.pokemon.map(item => {
                           return { ...item.pokemon };
@@ -42,18 +42,19 @@ const Home = () => {
                     : pokemonResult?.results),
             ]);
         };
-
         if (!mounted.current) {
             mounted.current = true;
         } else {
             setLoading(prevState => {
                 if (prevState) {
-                    onResponseData(state);
+                    onGetResponseData();
                     return false;
                 }
             });
         }
-    }, [state, isFilter]);
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [state]);
 
     const handleLoadData = () => {
         if (!isLoading && !isFilter) {
@@ -82,6 +83,7 @@ const Home = () => {
 
     const onGetValueFilter = (e, name) => {
         e.preventDefault();
+
         if (name === isFilter) {
             setIsFilter(false);
             getDataPokemon();
