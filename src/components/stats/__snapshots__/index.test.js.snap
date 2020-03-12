@@ -32,7 +32,10 @@ exports[`Stats Component renders correct Stats and snapshot element <Stats/> 1`]
           className="stats__list-graph"
         >
           <div
-            className="stats__list-graph__percent speed"
+            className="
+                                            stats__list-graph__percent 
+                                            speed
+                                        "
             style={
               Object {
                 "width": "14.150943396226415%",
@@ -70,7 +73,10 @@ exports[`Stats Component renders correct Stats and snapshot element <Stats/> 1`]
           className="stats__list-graph"
         >
           <div
-            className="stats__list-graph__percent special-defense"
+            className="
+                                            stats__list-graph__percent 
+                                            special-defense
+                                        "
             style={
               Object {
                 "width": "20.440251572327046%",
@@ -108,7 +114,10 @@ exports[`Stats Component renders correct Stats and snapshot element <Stats/> 1`]
           className="stats__list-graph"
         >
           <div
-            className="stats__list-graph__percent special-attack"
+            className="
+                                            stats__list-graph__percent 
+                                            special-attack
+                                        "
             style={
               Object {
                 "width": "20.440251572327046%",
@@ -146,7 +155,10 @@ exports[`Stats Component renders correct Stats and snapshot element <Stats/> 1`]
           className="stats__list-graph"
         >
           <div
-            className="stats__list-graph__percent defense"
+            className="
+                                            stats__list-graph__percent 
+                                            defense
+                                        "
             style={
               Object {
                 "width": "15.40880503144654%",
@@ -184,7 +196,10 @@ exports[`Stats Component renders correct Stats and snapshot element <Stats/> 1`]
           className="stats__list-graph"
         >
           <div
-            className="stats__list-graph__percent attack"
+            className="
+                                            stats__list-graph__percent 
+                                            attack
+                                        "
             style={
               Object {
                 "width": "15.40880503144654%",
@@ -222,7 +237,10 @@ exports[`Stats Component renders correct Stats and snapshot element <Stats/> 1`]
           className="stats__list-graph"
         >
           <div
-            className="stats__list-graph__percent hp"
+            className="
+                                            stats__list-graph__percent 
+                                            hp
+                                        "
             style={
               Object {
                 "width": "14.150943396226415%",

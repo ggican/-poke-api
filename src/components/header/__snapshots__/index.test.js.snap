@@ -15,7 +15,7 @@ exports[`Header Component renders and create snapshot <Header /> 1`] = `
       "entries": Array [
         Object {
           "hash": "",
-          "key": "35kz6l",
+          "key": "eltx9x",
           "pathname": "/random",
           "search": "",
           "state": undefined,
@@ -29,7 +29,7 @@ exports[`Header Component renders and create snapshot <Header /> 1`] = `
       "listen": [Function],
       "location": Object {
         "hash": "",
-        "key": "35kz6l",
+        "key": "eltx9x",
         "pathname": "/random",
         "search": "",
         "state": undefined,

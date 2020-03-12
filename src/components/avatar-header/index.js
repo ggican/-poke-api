@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // begin local import
 import AvatarHeaderStyle from "./index.style";
@@ -28,5 +29,26 @@ const AvatarHeader = ({ image, name, abilities }) => {
 };
 
 AvatarHeader.Loading = AvatarHeaderLoading;
+
+AvatarHeader.defaultProps = {
+    image: "",
+    name: "",
+    abilities: [],
+};
+
+AvatarHeader.propTypes = {
+    /**
+       `name` for use name in components
+       */
+    name: PropTypes.string,
+    /**
+       `image` for use name in components
+       */
+    image: PropTypes.string,
+    /**
+       `abilities` for use name in components
+       */
+    abilities: PropTypes.array,
+};
 
 export default AvatarHeader;

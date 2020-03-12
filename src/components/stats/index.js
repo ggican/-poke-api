@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import Style from "./index.style";
-import type from "./index.type";
 import StatsLoading from "./index.loading";
 
 import icSpDefense from "../../static/icons/ic-sp-defense.png";
@@ -77,6 +78,21 @@ const Stats = props => {
 
 Stats.Loading = StatsLoading;
 
-Stats.propTypes = type;
+Stats.defaultProps = {
+    data: [],
+};
+
+Stats.propTypes = {
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            base_stat: PropTypes.number.isRequired,
+            effort: PropTypes.number.isRequired,
+            stat: PropTypes.shape({
+                name: PropTypes.string.isRequired,
+                url: PropTypes.string.isRequired,
+            }),
+        }),
+    ).isRequired,
+};
 
 export default Stats;

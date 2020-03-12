@@ -3,6 +3,7 @@ import React from "react";
 import Skeleton from "../skeleton";
 
 import AbilitiesStyle from "./index.style";
+
 const AbilitiesLoading = () => {
     return (
         <AbilitiesStyle>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const Container = styled.div`
     background-color: #f7f7f7;
@@ -13,5 +14,15 @@ const Container = styled.div`
         width: 100%;
     }
 `;
+
+Container.defaultProps = {
+    noPadding: false,
+};
+Container.propTypes = {
+    /**
+      `noPadding` for name of card
+      */
+    noPadding: PropTypes.bool,
+};
 
 export default Container;

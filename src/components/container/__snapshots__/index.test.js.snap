@@ -23,10 +23,6 @@ exports[`Container Component renders and create snapshot <Content /> 1`] = `
   }
 }
 
-@media (max-width:450px) {
-
-}
-
 <div
   className="c0"
   data-test="container-test-mount"

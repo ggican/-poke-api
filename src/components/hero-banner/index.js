@@ -1,7 +1,9 @@
 import React from "react";
-import WaveImage from "../../static/wave-image.svg";
+import PropTypes from "prop-types";
+
 import HeroBannerStyles from "./index.style";
-import type from "./index.type";
+
+import WaveImage from "../../static/wave-image.svg";
 
 const HeroBanner = props => {
     const { total, unique } = props;
@@ -20,5 +22,19 @@ const HeroBanner = props => {
     );
 };
 
-HeroBanner.propTypes = type;
+HeroBanner.defaultProps = {
+    total: 0,
+    unique: 0,
+};
+
+HeroBanner.propTypes = {
+    /**
+      `total` for total pokemon you have
+      */
+    total: PropTypes.number.isRequired,
+    /**
+      `unique` for total unique pokemon you have
+      */
+    unique: PropTypes.number.isRequired,
+};
 export default HeroBanner;

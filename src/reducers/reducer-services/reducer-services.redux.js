@@ -15,33 +15,6 @@ const resultReduxFn = (state, action) => {
 
 export const servicesRedux = (state = initialState, action = {}) => {
     switch (action.type) {
-        case types.SUCCESS:
-            return resultReduxFn(state, action);
-        case types.CREATED:
-            return resultReduxFn(state, action);
-        case types.BAD_REQUEST:
-            return resultReduxFn(state, action);
-        case types.UNAUTHORIZED:
-            return resultReduxFn(state, action);
-        case types.NO_CONTENT:
-            return resultReduxFn(state, action);
-        case types.NOT_FOUND:
-            return resultReduxFn(state, action);
-        case types.CONFLICT:
-            return resultReduxFn(state, action);
-        case types.INTERNAL_SERVICE_ERROR:
-            return resultReduxFn(state, action);
-        case types.ADD_TO_PURCHASE:
-            return {
-                ...state,
-                [action.group]: {
-                    ...state[action.group],
-                    [action.key]: state[action.group][action.key].concat(
-                        action.id,
-                    ),
-                },
-            };
-
         case types.CLEAR:
             return {
                 ...state,
@@ -51,6 +24,6 @@ export const servicesRedux = (state = initialState, action = {}) => {
                 },
             };
         default:
-            return state;
+            return resultReduxFn(state, action);
     }
 };

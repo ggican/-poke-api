@@ -57,3 +57,11 @@ export const StatsDefault = () => {
 
     return <Stats data={stats}></Stats>;
 };
+
+export const StatsLoading = () => {
+    return (
+        <div>
+            <Stats.Loading></Stats.Loading>
+        </div>
+    );
+};

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import IosArrowForward from "react-ionicons/lib/IosArrowForward";
 
 // begin global import
-import { TitleFour } from "../typography";
+import { Text } from "../typography";
 import ThumbAvatar from "../thumb-avatar";
 // end global import
 
@@ -22,6 +22,7 @@ import defaultImage from "../../static/image/dummy-square.jpg";
 
 const CardList = props => {
     const { radius, size, name, image } = props;
+
     return (
         <CardListBoxStyle>
             <CardListBoxLeftStyle>
@@ -32,9 +33,9 @@ const CardList = props => {
                 ></ThumbAvatar>
             </CardListBoxLeftStyle>
             <CardListBoxRightStyle>
-                <TitleFour style={{ textTransform: "capitalize" }}>
+                <Text.BodyTwo style={{ textTransform: "capitalize" }}>
                     {name}
-                </TitleFour>
+                </Text.BodyTwo>
                 <IosArrowForward fontSize="24px" color="#424242" />
             </CardListBoxRightStyle>
         </CardListBoxStyle>
