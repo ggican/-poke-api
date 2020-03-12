@@ -1,15 +1,10 @@
 import button from "./button";
 import color from "./color";
+import thumbAvatar from "./thumb-avatar";
 
 const tokens = {
-    main: "mediumseagreen",
-    header: {
-        default: {
-            background: "#fff",
-            borderColor: "#ddd",
-        },
-    },
     ...button,
+    ...thumbAvatar,
     color: color,
 };
 

@@ -44,20 +44,6 @@
         "react/prop-types": 0,
         "prettier/prettier": "error"
     },
-    "overrides": [
-        {
-            "files": ["bin/*.js", "lib/*.js"],
-            "excludedFiles": "*.test.js",
-            "rules": {
-                "max-len": [
-                    "error",
-                    {
-                        "code": 80
-                    }
-                ]
-            }
-        }
-    ],
     "settings": {
         "react": {
             "version": "detetect"

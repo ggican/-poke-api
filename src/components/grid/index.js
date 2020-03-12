@@ -41,6 +41,7 @@ Grid.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node,
+        PropTypes.bool,
     ]).isRequired,
     /**
       Use `align` for set align-items in grid system
@@ -76,7 +77,7 @@ Grid.propTypes = {
     /**
       `className` for set classname in grid system
       */
-    className: PropTypes.string,
+    className: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 };
 
 export default Grid;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Reducer Services Component SUCCESS servicesRedux type 200 function and Snapshot servicesRedux 1`] = `
+exports[`Reducer Services Component SUCCESS servicesRedux Snapshot servicesRedux 1`] = `
 Object {
   "product": Object {
     "productList": false,

@@ -1,0 +1,56 @@
+import React from "react";
+import CardList from "./index";
+
+import {
+    CardListBoxStyle,
+    CardListBoxLeftStyle,
+    CardListBoxRightStyle,
+} from "./index.style";
+
+let wrapper;
+
+beforeEach(() => {
+    wrapper = shallow(
+        <CardList
+            data-test="thumb-avatar-test-wrapper"
+            radius="circle"
+            size="lg"
+            name="BELARUS"
+        />,
+    );
+});
+
+describe("Card List Component", () => {
+    // it("renders and create snapshot <CardList />", () => {
+    //     expect(
+    //         toJson(
+    //             shallow(
+    //                 <CardList
+    //                     data-test="thumb-avatar-test-wrapper"
+    //                     radius="circle"
+    //                     size="lg"
+    //                     name="BELARUS"
+    //                 />,
+    //             ),
+    //         ),
+    //     ).toMatchSnapshot();
+    // });
+
+    // it("renders and create snapshot style <CardListBoxStyle />", () => {
+    //     expect(mount(<CardListBoxStyle></CardListBoxStyle>)).toMatchSnapshot();
+    // });
+    // it("renders and create snapshot style <CardListBoxLeftStyle />", () => {
+    //     expect(
+    //         mount(<CardListBoxLeftStyle></CardListBoxLeftStyle>),
+    //     ).toMatchSnapshot();
+    // });
+    // it("renders and create snapshot style <CardListBoxRightStyle />", () => {
+    //     expect(
+    //         mount(<CardListBoxRightStyle></CardListBoxRightStyle>),
+    //     ).toMatchSnapshot();
+    // });
+
+    it("renders success <CardList />", () => {
+        // expect(wrapper.exists()).toBe(true);
+    });
+});

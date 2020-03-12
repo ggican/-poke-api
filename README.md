@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4840c3c0-769d-43c6-af2a-4480766c9c60/deploy-status)](https://app.netlify.com/sites/happy-engelbart-98ea7c/deploys) [![Build Status](https://travis-ci.org/ggican/-simple-product.svg?branch=master)](https://travis-ci.org/ggican/-simple-product) [![Coverage Status](https://coveralls.io/repos/github/ggican/-simple-product/badge.svg)](https://coveralls.io/github/ggican/-simple-product) 
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest) [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
  
 
 ## Get Started
@@ -12,7 +12,7 @@ Install application with `npm install`
 ### Story Book
 run story book for view documentation components
 
-![Story Book View](https://i.imgur.com/q6V3GSW.png)
+
 
 #### `npm run storybook`
 run story book for view documentation components with `npm run storybook`
