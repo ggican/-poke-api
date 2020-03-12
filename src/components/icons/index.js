@@ -2,11 +2,13 @@ import styled from "styled-components";
 import burgerMenu from "../../static/icons/ic-burger-menu.svg";
 import pokeBall from "../../static/icons/ic-poke-ball.svg";
 import logo from "../../static/icons/ic-logo.svg";
+import arrowLeft from "../../static/icons/ic-arrow-left.svg";
 
 const iconList = {
     burgerMenu: burgerMenu,
     pokeBall: pokeBall,
     logo: logo,
+    arrowLeft: arrowLeft,
 };
 
 const Icons = styled.i`

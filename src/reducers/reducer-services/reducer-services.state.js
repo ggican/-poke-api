@@ -4,6 +4,8 @@ const serviceState = {
     },
     pokemon: {
         pokemonDetail: false,
+        pokemonList: false,
+        pokemonFilter: false,
     },
 };
 

@@ -4,7 +4,6 @@ import { servicesAction } from "../../reducers";
 
 const service = {
     pokemonDetail: ({ dispatch, slug }) => {
-        console.log(slug);
         servicesAction(dispatch).reduxFetch({
             url: `pokemon/${slug}`,
             method: "GET",

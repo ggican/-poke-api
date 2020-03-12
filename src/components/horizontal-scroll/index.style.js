@@ -12,6 +12,11 @@ export default styled.div`
             overflow-x: auto;
             padding: 15px 0;
             width: 450px;
+            ${({ noPaddingTop }) =>
+                noPaddingTop &&
+                `
+                    padding-top: 0;
+            `}
             @media (max-width: 450px) {
                 width: 100%;
             }

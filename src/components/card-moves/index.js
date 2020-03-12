@@ -41,8 +41,6 @@ const CardMoves = props => {
     );
 };
 
-CardMoves.Loading = CardMovesLoading;
-
 CardMoves.defaultProps = {
     name: "",
     level: false,
@@ -76,5 +74,7 @@ CardMoves.propTypes = {
       */
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
 };
+
+CardMoves.Loading = CardMovesLoading;
 
 export default CardMoves;

@@ -65,6 +65,11 @@ describe("Stats Component", () => {
     it("renders correct Stats and snapshot element <Stats/>", () => {
         expect(toJson(shallow(element))).toMatchSnapshot();
     });
+    it("renders correct Stats and snapshot element <Stats.Loading/>", () => {
+        expect(
+            toJson(shallow(<Stats.Loading></Stats.Loading>)),
+        ).toMatchSnapshot();
+    });
 
     it("check element length <Stats/>", () => {
         expect(

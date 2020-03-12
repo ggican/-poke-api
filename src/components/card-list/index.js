@@ -3,18 +3,19 @@ import PropTypes from "prop-types";
 
 import IosArrowForward from "react-ionicons/lib/IosArrowForward";
 
-// begin global import
-import { Text } from "../typography";
-import ThumbAvatar from "../thumb-avatar";
-// end global import
-
 // begin local import
 import {
     CardListBoxStyle,
     CardListBoxLeftStyle,
     CardListBoxRightStyle,
 } from "./index.style";
+import CardListLoading from "./index.loading";
 // end local import
+
+// begin global import
+import { Text } from "../typography";
+import ThumbAvatar from "../thumb-avatar";
+// end global import
 
 // begin static import file
 import defaultImage from "../../static/image/dummy-square.jpg";
@@ -67,5 +68,7 @@ CardList.propTypes = {
       */
     image: PropTypes.string,
 };
+
+CardList.Loading = CardListLoading;
 
 export default CardList;

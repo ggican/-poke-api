@@ -1,19 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import {
+    randomColourOne,
+    randomColourTwo,
+} from "../../utils/generator-random-color";
+
 import Skeleton from "../../components/skeleton";
 import waveImage from "../../static/wave-image.svg";
 
 import StyleCardMoves from "./index.style";
 
-const CardMoves = props => {
+const CardMovesLoading = props => {
     const { level, randomBackground, width, wave } = props;
-    const randomColourOne = "#50a1d8".replace(/0/g, function() {
-        return (~~(Math.random() * 16)).toString(16);
-    });
-    const randomColourTwo = "#000000".replace(/0/g, function() {
-        return (~~(Math.random() * 16)).toString(16);
-    });
+
     return (
         <StyleCardMoves
             width={width}
@@ -50,13 +50,13 @@ const CardMoves = props => {
     );
 };
 
-CardMoves.defaultProps = {
+CardMovesLoading.defaultProps = {
     level: false,
     randomBackground: false,
     width: 75,
     wave: false,
 };
-CardMoves.propTypes = {
+CardMovesLoading.propTypes = {
     /**
       Use `level` for level of moves by default false
       */
@@ -79,4 +79,4 @@ CardMoves.propTypes = {
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
 };
 
-export default CardMoves;
+export default CardMovesLoading;

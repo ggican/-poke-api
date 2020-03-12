@@ -1,5 +1,6 @@
 import React from "react";
 import Abilities from "./index";
+import AbilitiesStyle from "./index.style";
 
 let element;
 beforeEach(() => {
@@ -27,6 +28,23 @@ beforeEach(() => {
 describe("Abilities Component", () => {
     it("renders correct Abilities and snapshot element <Abilities/>", () => {
         expect(toJson(mount(element))).toMatchSnapshot();
+    });
+
+    it("renders correct Abilities and snapshot loading element <Abilities/>", () => {
+        expect(shallow(<Abilities.Loading></Abilities.Loading>).exists()).toBe(
+            true,
+        );
+    });
+
+    it("renders correct Abilities and snapshot loading element <Abilities.Loading/>", () => {
+        expect(
+            toJson(mount(<Abilities.Loading></Abilities.Loading>)),
+        ).toMatchSnapshot();
+    });
+    it("renders correct Abilities and snapshot style element <AbilitiesStyle/>", () => {
+        expect(
+            toJson(mount(<AbilitiesStyle></AbilitiesStyle>)),
+        ).toMatchSnapshot();
     });
 
     it("check total length element loop <CardMoves/>", () => {

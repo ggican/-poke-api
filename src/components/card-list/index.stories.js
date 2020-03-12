@@ -38,3 +38,12 @@ export const CardListWidthImage = () => {
         ></CardList>
     );
 };
+export const CardListLoading = () => {
+    return (
+        <CardList.Loading
+            radius="circle"
+            size="lg"
+            name="BELARUS"
+        ></CardList.Loading>
+    );
+};

@@ -10,7 +10,9 @@ const routeList = [
         path: "/pokemon-detail/:slug",
         component: lazy(() => import("../pages/pokemon-detail")),
         style: {
-            header: false,
+            header: {
+                withBackButton: true,
+            },
         },
         role: ["GUEST"],
     },

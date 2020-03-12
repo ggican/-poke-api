@@ -18,6 +18,10 @@ const getAuthToken = options => {
 };
 
 const collectResponse = (response, options, status) => {
+    if (!response) {
+        return false;
+    }
+
     return {
         response: response.data,
         type: response.status,

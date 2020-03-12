@@ -37,6 +37,11 @@ describe("Card Moves Component", () => {
     it("renders correct card move and snapshot element two <CardMoves/>", () => {
         expect(toJson(shallow(elementTwo))).toMatchSnapshot();
     });
+    it("renders correct card move loading and snapshot element two <CardMoves.Loading/>", () => {
+        expect(
+            toJson(shallow(<CardMoves.Loading></CardMoves.Loading>)),
+        ).toMatchSnapshot();
+    });
 
     it("check elementOne name label  <CardMoves/>", () => {
         expect(

@@ -1,5 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Stats Component renders correct Stats and snapshot element <Stats.Loading/> 1`] = `
+<styled.div>
+  <div
+    className="stats__container"
+  >
+    <div
+      className="stats__list"
+    >
+      <div
+        className="stats__list-row"
+      >
+        <div
+          className="stats__list-title"
+        >
+          <div
+            className="stats__list-icon"
+          >
+            <Skeleton
+              circle={false}
+              height={30}
+              style={Object {}}
+              width="100%"
+            />
+          </div>
+          <span>
+            <Skeleton
+              circle={false}
+              height={10}
+              style={Object {}}
+              width="30px"
+            />
+          </span>
+        </div>
+        <div
+          className="stats__list-graph"
+        />
+        <div
+          className="stats__list-point"
+        >
+          <Skeleton
+            circle={false}
+            height={10}
+            style={Object {}}
+            width="20px"
+          />
+        </div>
+      </div>
+      <div
+        className="stats__list-row"
+      >
+        <div
+          className="stats__list-title"
+        >
+          <div
+            className="stats__list-icon"
+          >
+            <Skeleton
+              circle={false}
+              height={30}
+              style={Object {}}
+              width="100%"
+            />
+          </div>
+          <span>
+            <Skeleton
+              circle={false}
+              height={10}
+              style={Object {}}
+              width="30px"
+            />
+          </span>
+        </div>
+        <div
+          className="stats__list-graph"
+        />
+        <div
+          className="stats__list-point"
+        >
+          <Skeleton
+            circle={false}
+            height={10}
+            style={Object {}}
+            width="20px"
+          />
+        </div>
+      </div>
+      <div
+        className="stats__list-row"
+      >
+        <div
+          className="stats__list-title"
+        >
+          <div
+            className="stats__list-icon"
+          >
+            <Skeleton
+              circle={false}
+              height={30}
+              style={Object {}}
+              width="100%"
+            />
+          </div>
+          <span>
+            <Skeleton
+              circle={false}
+              height={10}
+              style={Object {}}
+              width="30px"
+            />
+          </span>
+        </div>
+        <div
+          className="stats__list-graph"
+        />
+        <div
+          className="stats__list-point"
+        >
+          <Skeleton
+            circle={false}
+            height={10}
+            style={Object {}}
+            width="20px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</styled.div>
+`;
+
 exports[`Stats Component renders correct Stats and snapshot element <Stats/> 1`] = `
 <styled.div>
   <div

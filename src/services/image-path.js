@@ -5,7 +5,7 @@ const imagePath = fileName => {
 };
 
 const regexReplaceUrl = string => {
-    return string.match(/\/([^\/]+)\/?$/)[1];
+    return string.match(/\/([^\/]+)\/?$/)[1]; // eslint-disable-line
 };
 
 export default imagePath;
