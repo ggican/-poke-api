@@ -18,9 +18,7 @@ after_script: # Upload coverage reports
 deploy:
     - provider: script
       script: netlify deploy -s $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN -p --dir ./build
-      skip_cleanup: true
     - provider: script
       script: netlify deploy -s $NETLIFY_SITE_ID_STORY_BOOK --auth $NETLIFY_ACCESS_TOKEN_STORY_BOOK -p --dir ./storybook-static
-      skip_cleanup: true
 on:
     branch: master
