@@ -19,6 +19,6 @@ deploy:
     - provider: script
       script: netlify deploy -s $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN -p --dir ./build
     - provider: script
-      script: netlify deploy -s $NETLIFY_SITE_ID_STORY_BOOK --auth $NETLIFY_ACCESS_TOKEN_STORY_BOOK -p --dir ./storybook-static
+      script: netlify deploy -s $NETLIFY_ACCESS_TOKEN_STORYBOOK --auth $NETLIFY_ACCESS_TOKEN_STORYBOOK -p --dir ./storybook-static
 on:
     branch: master
